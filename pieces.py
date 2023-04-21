@@ -75,9 +75,4 @@ class piece():
         if self.king:
             win.blit(CROWN,(self.x-CROWN.get_width()//2,self.y-CROWN.get_height()//2))
 
-    def __repr__(self):
-        """
-        Represent the piece as a string.
-        :return: The color of the piece as a string.
-        """
-        return str(self.color)
+    
