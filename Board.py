@@ -20,7 +20,6 @@ WIN = pygame.display.set_mode((WIDTH, HEIGHT))
 def get_font(size):
     """
     Returns Press-Start-2P in the desired size
-    :param size: size of the font
     :return: font object
     """
     return pygame.font.SysFont('comicsans', size)
@@ -42,7 +41,6 @@ class Board:
     def draw_squares(self, win):
         """
         Draws the squares on the board
-        :param win: window object
         """
         win.fill(BLACK)
         for row in range(ROWS):
@@ -69,9 +67,7 @@ class Board:
     def move(self, piece, row, col):
         """
         Move the piece to the given row and column
-        :param piece: piece object
-        :param row: row to move the piece to
-        :param col: column to move the piece to
+       
         """
         self.board[piece.row][piece.col], self.board[row][col] = self.board[row][col], self.board[piece.row][piece.col]
         piece.move(row, col)
@@ -86,16 +82,14 @@ class Board:
     def get_piece(self, row, col):
         """
         Get the piece at the given row and column
-        :param row: row of the piece
-        :param col: column of the piece
-        :return: piece object
+      
         """
         return self.board[row][col]
 
     def draw(self, win):
         """
         Draw the board
-        :param win: window object
+        
         """
         self.draw_squares(win)
         for row in range(ROWS):
@@ -107,11 +101,7 @@ class Board:
     def _traverse_left(self, row, end_row, step, color, left):
         """
         Helper function to traverse left
-        :param row: row to traverse
-        :param end_row: end row
-        :param step: step size
-        :param color: color of the piece
-        :param left: left column
+      
         :return: dictionary of valid moves
         """
         moves = {}
@@ -127,11 +117,7 @@ class Board:
     def _traverse_right(self, row, end_row, step, color, right):
         """
         Helper function to traverse right
-        :param row: row to traverse
-        :param end_row: end row
-        :param step: step size
-        :param color: color of the piece
-        :param right: right column
+     
         :return: dictionary of valid moves
         """
         moves = {}
@@ -147,7 +133,7 @@ class Board:
     def get_valid_moves(self, piece):
         """
         Get the valid moves for the given piece
-        :param piece: piece object
+        
         :return: dictionary of valid moves
         """
         moves = {}
@@ -167,13 +153,9 @@ class Board:
     
 
     def remove(self, pieces):
-        """Removes pieces from the board.
+        """
+        Removes pieces from the board.
 
-        Args:
-            pieces (list): A list of pieces to be removed.
-
-        Returns:
-            None
         """
         for piece in pieces:
             self.board[piece.row][piece.col] = 0
@@ -206,9 +188,6 @@ class Board:
 
     def get_all_pieces(self, color):
         """Gets all pieces of a certain color.
-
-        Args:
-            color (int): The color of the pieces to be retrieved.
 
         Returns:
             list: A list of pieces of the specified color.
