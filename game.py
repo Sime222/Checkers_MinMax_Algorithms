@@ -20,9 +20,6 @@ class Game:
         """
         Initializes the game.
 
-        Parameters:
-            win (pygame.Surface): The game window.
-            starting_player (tuple): The starting player's color.
         """
         self.selected = None
         self.board = Board()
@@ -65,10 +62,7 @@ class Game:
         """
         Selects a piece on the board.
 
-        Parameters:
-            row (int): The row of the piece.
-            col (int): The column of the piece.
-
+    
         Returns:
             bool: True if the piece was selected, False otherwise.
         """
@@ -89,9 +83,6 @@ class Game:
         """
         Moves a piece on the board.
 
-        Parameters:
-            row (int): The row of the piece.
-            col (int): The column of the piece.
 
         Returns:
             bool: True if the piece was moved, False otherwise.
@@ -125,9 +116,6 @@ class Game:
     def draw_moves(self, moves):
         """
         Draws the valid moves on the board.
-
-        Parameters:
-            moves (dict): The valid moves.
         """
         for move in moves:
             row, col = move
@@ -168,8 +156,6 @@ class Game:
         """
         Makes a move for the AI.
 
-        Parameters:
-            board (Board): The game board.
         """
         self.board = board
         self.next_turn()
