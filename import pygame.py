@@ -3,12 +3,7 @@ import pygame
 def create_game_tree_visual():
     """
     This function creates a game tree visually in Pygame.
-    
-    Parameters:
-    None
-    
-    Returns:
-    None
+   
     """
     # Initialize Pygame
     pygame.init()
