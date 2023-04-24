@@ -24,8 +24,6 @@ def get_font(size):
     """
     This function is used to get the font of the game.
 
-    Parameters:
-    size (int): The size of the font.
 
     Returns:
     pygame.font.SysFont: The font of the game.
@@ -37,8 +35,6 @@ def get_mouse(pos):
     """
     This function is used to get the mouse position.
 
-    Parameters:
-    pos (tuple): The position of the mouse.
 
     Returns:
     row (int): The row of the mouse.
