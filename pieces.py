@@ -27,9 +27,7 @@ class piece():
     def __init__(self,row,col,color):
         """
         Constructor for the piece class.
-        :param row: The row of the piece.
-        :param col: The column of the piece.
-        :param color: The color of the piece.
+      
         """
         self.row = row
         self.col = col
@@ -44,8 +42,7 @@ class piece():
     def move(self,row,col):
         """
         Move the piece to a new row and column.
-        :param row: The new row of the piece.
-        :param col: The new column of the piece.
+        
         """
         self.row=row
         self.col=col
