@@ -45,9 +45,6 @@ def get_font(size):
     """
     This function returns the font 'Press-Start-2P' in the desired size.
 
-    Parameters:
-    size (int): The desired font size.
-
     Returns:
     font (pygame.font): The font object.
     """
