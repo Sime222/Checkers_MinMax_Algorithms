@@ -14,12 +14,6 @@ def MiniMAx(pos, depth, max_pl, game):
     """
     This function implements the MiniMax algorithm to find the best move for a given position.
 
-    Parameters:
-    pos (object): The current position of the game.
-    depth (int): The depth of the search tree.
-    max_pl (bool): True if the current player is the maximizer, False if the current player is the minimizer.
-    game (object): The game object.
-
     Returns:
     tuple: A tuple containing the evaluation of the position and the best move for the current position.
     """
@@ -68,12 +62,6 @@ def MiniMAx(pos, depth, max_pl, game):
 def get_all_m(board, color, game):
     """
     This function returns all the possible moves for a given board and color.
-
-    Parameters:
-    board (object): The board object.
-    color (tuple): The color of the pieces.
-    game (object): The game object.
-
     Returns:
     list: A list of all the possible moves.
     """
@@ -104,13 +92,6 @@ def simul_move(piece, move, board, game, skip):
     """
     This function simulates the move on the board.
 
-    Parameters:
-    piece (object): The piece object.
-    move (tuple): The move to be made.
-    board (object): The board object.
-    game (object): The game object.
-    skip (bool): True if the move is a skip move, False otherwise.
-
     Returns:
     object: The board object after the move is made.
     """
@@ -128,10 +109,6 @@ def draw_moves(game, board, piece):
     """
     This function draws the moves on the board.
 
-    Parameters:
-    game (object): The game object.
-    board (object): The board object.
-    piece (object): The piece object.
     """
 
     # Get the valid moves for the piece
